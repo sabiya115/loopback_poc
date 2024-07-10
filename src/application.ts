@@ -10,6 +10,7 @@ import {ServiceMixin} from '@loopback/service-proxy';
 import path from 'path';
 import {DbDataSource} from './datasources';
 import {MySequence} from './sequence';
+import {RepositoryHelper} from './services/repository.injections';
 
 // const UserRepository = require("../src/repositories/users.repository.ts")
 
@@ -33,6 +34,7 @@ export class LoopTypescriptPocApplication extends BootMixin(
       path: '/explorer',
     });
     this.component(RestExplorerComponent);
+    this.bind('helper.RepositoryHelper').toClass(RepositoryHelper);
     // this.repository(UserRepository);
 
     this.projectRoot = __dirname;

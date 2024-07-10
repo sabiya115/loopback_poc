@@ -26,5 +26,6 @@ export class PackagesRepository extends DefaultCrudRepository<
     this.modelClass.definition.settings.mongodb = {
       collection: collectionName,
     };
+    console.log("colletion name is", collectionName);
   }
 }

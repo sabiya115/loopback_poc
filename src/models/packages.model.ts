@@ -5,7 +5,7 @@ export class Packages extends Entity {
   @property({
     type: 'string',
     id: true,
-    generated: true,
+    generated: false,
   })
   id?: string;
 
